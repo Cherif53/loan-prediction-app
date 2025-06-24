@@ -20,10 +20,10 @@ model = RandomForestClassifier()
 model.fit(X_train, y_train)
 
 # Sauvegarde du modèle
-joblib.dump(model, 'model.pkl')
+joblib.dump(model, 'model.joblib', compress=3)
 
 # Chargement du modèle
-model = joblib.load('model.pkl')
+model = joblib.load('model.joblib')
 
 # Interface
 st.title("Prédiction de Prêt Bancaire 🏦")
